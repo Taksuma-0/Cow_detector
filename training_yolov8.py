@@ -3,20 +3,17 @@ data_yaml_path = "C:/Users/welin/OneDrive/Escritorio/cow_detector/Data/data.yaml
 
 from ultralytics import YOLO
 
-# --- CONFIGURACIÓN DEL ENTRENAMIENTO ---
-
-# 1. Cargar el modelo YOLOv8 'small' pre-entrenado.
 model = YOLO("yolov8s.pt") 
 
 data_yaml_path = "C:/Users/welin/OneDrive/Escritorio/cow_detector/Data/data.yaml"
 
-# 3. Hiperparámetros de entrenamiento optimizados.
-num_epochs = 200        # Un número alto, Early Stopping se encargará de parar si es necesario.
-patience_epochs = 30    # Parada temprana si no mejora en 30 épocas.
-image_size = 640
-batch_size = 16         # Batch size adecuado para el modelo 's' en tu GPU.
 
-# --- INICIAR EL ENTRENAMIENTO ---
+num_epochs = 200       
+patience_epochs = 30    
+image_size = 640
+batch_size = 16         
+
+
 if __name__ == '__main__':
     try:
         results = model.train(
@@ -26,7 +23,7 @@ if __name__ == '__main__':
             batch=batch_size,
             imgsz=image_size,
             
-            # --- RECETA DE AUMENTACIÓN AGRESIVA Y ESPECIALIZADA ---
+           
             augment=True, 
             
             # Transformaciones geométricas para simular variedad de ángulos y distancias.
@@ -37,11 +34,11 @@ if __name__ == '__main__':
             perspective=0.001,
             fliplr=0.5,
             
-            # Técnicas avanzadas para combatir la oclusión y mejorar la generalización.
+           
             mixup=0.1,
-            copy_paste=0.1 # Muy potente para enseñar al modelo sobre oclusión.
+            copy_paste=0.1 
         )
         print("✅ ¡Entrenamiento definitivo completado exitosamente!")
         
     except Exception as e:
-        print(f"🚨 Ocurrió un error durante el entrenamiento: {e}")
+        print(f"Ocurrió un error durante el entrenamiento: {e}")
