@@ -1,0 +1,24 @@
+# docker-compose.yaml (en la carpeta raíz del proyecto)
+
+version: '3.8'
+
+services:
+  # Servicio 1: Página web estática
+  frontend:
+    build: ./vaquapp
+    ports:
+      - "8080:80"
+    networks:
+      - cow-network
+
+  # Servicio 2: Aplicación de Streamlit y YOLO
+  backend:
+    build: ./pagina_resultados
+    ports:
+      - "8501:8501"
+    networks:
+      - cow-network
+
+networks:
+  cow-network:
+    driver: bridge
