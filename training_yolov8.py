@@ -1,6 +1,3 @@
-data_yaml_path = "C:/Users/welin/OneDrive/Escritorio/cow_detector/Data/data.yaml"
-
-
 from ultralytics import YOLO
 
 model = YOLO("yolov8s.pt") 
