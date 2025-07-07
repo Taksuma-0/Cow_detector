@@ -19,6 +19,7 @@ if __name__ == '__main__':
             patience=patience_epochs,
             batch=batch_size,
             imgsz=image_size,
+            device = "cuda",
             
            
             augment=True, 

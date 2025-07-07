@@ -17,7 +17,7 @@ st.markdown("---")
 if model_type == "Detección de Objetos (YOLOv8)":
     st.header("Resultados del Modelo de Detección")
     
-    # Construimos la ruta completa de forma robusta
+    
     results_path = "training_results/detection/results.png"
     confusion_path = "training_results/detection/confusion_matrix.png"
 
