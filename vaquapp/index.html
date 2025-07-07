@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VaquApp – Monitoreo Bovino</title>
+  <link rel="icon" href="assets/logo.png" type="image/png" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <aside class="sidebar">
+    <div class="sidebar-header">
+      <img src="assets/logo.png" alt="VaquApp Logo" class="logo" />
+      <h2>VaquApp</h2>
+      <button class="collapse-btn" onclick="toggleSidebar()">«</button>
+    </div>
+    <nav class="sidebar-nav">
+      <ul>
+        <li><a href="#inicio"><span class="icon">🏠</span><span class="text">Inicio</span></a></li>
+        <li><a href="#funciones"><span class="icon">🔍</span><span class="text">Funciones</span></a></li>
+        <li><a href="#trazas"><span class="icon">📈</span><span class="text">Trazas</span></a></li>
+        <li><a href="#prediccion"><span class="icon">🤖</span><span class="text">Predicción</span></a></li>
+        <li><a href="#contacto"><span class="icon">✉️</span><span class="text">Contacto</span></a></li>
+        <button onclick="window.open('http://localhost:8501/', '_blank')" class="btn" style="width: 100%; margin-top: 10px; display: flex; align-items: center; gap: 0.5rem; justify-content: center;">
+            <span class="icon" style="font-size:1.3rem;">🐄</span>
+            <span class="text">VaquApp Web</span>
+          </button>
+      </ul>
+    </nav>
+  </aside>
+  <div class="main-content">
+    <header class="topbar">
+      <button class="menu-toggle" onclick="toggleSidebar()">☰</button>
+    </header>
+
+    <section id="inicio" class="hero">
+      <div class="hero-content">
+        <h1>VaquApp</h1>
+        <p>Solución integral para monitoreo, trazabilidad y predicción en ganadería bovina.</p>
+        <a href="#funciones" class="btn">Comenzar</a>
+      </div>
+    </section>
+
+    <section id="funciones" class="section">
+      <h2>Funciones principales</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Monitoreo por cámara y TAG</h3>
+          <p>Registro automático de ubicación y actividad mediante cámaras y etiquetas RFID.</p>
+        </div>
+        <div class="card">
+          <h3>Alertas inteligentes</h3>
+          <p>Notificaciones en tiempo real ante fugas, inactividad o comportamientos anómalos.</p>
+        </div>
+        <div class="card">
+          <h3>Ingreso de datos de peso</h3>
+          <p>Entrada manual de peso por usuarios y almacenamiento histórico.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="trazas" class="section">
+      <h2>Trazas y reportes</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Historial de movimientos</h3>
+          <p>Visualiza rutas, ubicaciones y eventos de cada animal.</p>
+        </div>
+        <div class="card">
+          <h3>Reportes descargables</h3>
+          <p>Exporta información relevante en PDF o Excel para gestión y auditoría.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="prediccion" class="section">
+      <h2>Modelos predictivos</h2>
+      <div class="grid">
+        <div class="card">
+    <section id="prediccion" class="section">
+      <h2>Modelos Predictivos</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Predicción de Peso</h3>
+          <p>Estimación de peso futuro basado en registros anteriores.</p>
+        </div>
+        <div class="card">
+          <h3>Detección de Enfermedades</h3>
+          <p>Modelo de clasificación para alerta temprana de condiciones sanitarias.</p>
+        </div>
+        <div class="card">
+          <h3>Análisis Avanzado</h3>
+          <p>Predicción de rendimiento productivo y recomendaciones personalizadas.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contacto" class="section light">
+      <h2>Contacto</h2>
+      <form action="https://formspree.io/f/xeoekokv" method="POST" class="form">
+        <input type="text" name="name" placeholder="Nombre" required />
+        <input type="email" name="email" placeholder="Correo electrónico" required />
+        <textarea name="message" rows="4" placeholder="Mensaje" required></textarea>
+        <button type="submit" class="btn">Enviar</button>
+      </form>
+    </section>
+
+    <footer class="footer">
+      <p>© 2025 VaquApp. Todos los derechos reservados.</p>
+    </footer>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
